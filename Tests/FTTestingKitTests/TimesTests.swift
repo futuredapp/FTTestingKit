@@ -1,9 +1,3 @@
-//
-//  File.swift
-//  
-//
-//  Created by Matěj Kašpar Jirásek on 16/08/2019.
-//
 
 import XCTest
 import FTTestingKit
