@@ -1,15 +1,32 @@
 import XCTest
-@testable import FTTestingKit
+import FTTestingKit
 
 final class FTTestingKitTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct
-        // results.
-        XCTAssertEqual(FTTestingKit().text, "Hello, World!")
+    func testInstantExpectation() {
+        expect(within: 0.1) { reply in
+            reply(.success)
+        }
+    }
+
+    func testAsyncExpectation() {
+        expect(within: 0.1) { reply in
+            DispatchQueue.main.async {
+                reply(.success)
+            }
+        }
+    }
+
+    func testDelayedExpectation() {
+        expect(within: 0.1) { reply in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+                reply(.success)
+            }
+        }
     }
 
     static var allTests = [
-        ("testExample", testExample),
+        ("testInstantExpectation", testInstantExpectation),
+        ("testAsyncExpectation", testAsyncExpectation),
+        ("testDelayedExpectation", testDelayedExpectation),
     ]
 }
