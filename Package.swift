@@ -16,7 +16,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/mxcl/PromiseKit.git", from: "6.8.4")
+        .package(url: "https://github.com/mxcl/PromiseKit.git", from: "6.10.0")
     ],
     targets: [
         .target(
