@@ -1,7 +1,7 @@
 import XCTest
 import FTTestingKit
 
-final class FTTestingKitTests: XCTestCase {
+final class ExpectationTests: XCTestCase {
     func testInstantExpectation() {
         expect(within: 0.1) { reply in
             reply(.success)
