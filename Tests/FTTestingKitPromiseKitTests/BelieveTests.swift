@@ -13,7 +13,7 @@ final class BelieveTests: XCTestCase {
 
     static var allTests = [
         ("testInstantPromise", testInstantPromise),
-        ("testInstantPromise", testInstantPromise),
+        ("testDelayedPromise", testDelayedPromise),
     ]
 }
 
