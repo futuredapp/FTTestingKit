@@ -30,6 +30,10 @@ let package = Package(
         .testTarget(
             name: "FTTestingKitTests",
             dependencies: ["FTTestingKit"]
+        ),
+        .testTarget(
+            name: "FTTestingKitPromiseKitTests",
+            dependencies: ["FTTestingKitPromiseKit"]
         )
     ]
 )
