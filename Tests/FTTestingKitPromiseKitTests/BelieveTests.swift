@@ -16,4 +16,3 @@ final class BelieveTests: XCTestCase {
         ("testDelayedPromise", testDelayedPromise),
     ]
 }
-
