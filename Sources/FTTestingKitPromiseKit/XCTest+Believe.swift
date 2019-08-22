@@ -1,6 +1,8 @@
 import PromiseKit
 import XCTest
+#if !COCOAPODS
 import FTTestingKit
+#endif
 
 public extension XCTestCase {
     func believe<T>(for timeInterval: TimeInterval, in promise: @escaping @autoclosure () throws -> Promise<T>) {
