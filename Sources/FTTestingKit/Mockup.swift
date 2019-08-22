@@ -1,6 +1,3 @@
-
-import Foundation
-
 public protocol Mockup {
     static func random() -> Self
 }

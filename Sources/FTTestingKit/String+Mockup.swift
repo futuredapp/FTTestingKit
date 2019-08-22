@@ -1,4 +1,3 @@
-
 extension String: Mockup {
 
     private static let mockupCharacters = Array("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
@@ -9,11 +8,10 @@ extension String: Mockup {
 
     public static func random(
         length: Int,
-        characters: Array<Character>
+        characters: [Character]
     ) -> String {
         return String(length.times {
             characters[Int.random(in: 0..<characters.count)]
         })
     }
 }
-

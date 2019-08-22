@@ -1,4 +1,3 @@
-
 import XCTest
 import FTTestingKit
 
@@ -25,7 +24,6 @@ final class MockupTests: XCTestCase {
         ("testArrayGeneration", testArrayGeneration),
         ("testDateRandomness", testDateRandomness),
         ("testSingleCharacterString", testSingleCharacterString),
-        ("testStringRandomness", testStringRandomness),
+        ("testStringRandomness", testStringRandomness)
     ]
 }
-

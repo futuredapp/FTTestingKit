@@ -1,4 +1,3 @@
-
 import PromiseKit
 import XCTest
 import FTTestingKit

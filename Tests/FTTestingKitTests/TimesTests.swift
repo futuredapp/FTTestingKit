@@ -1,4 +1,3 @@
-
 import XCTest
 import FTTestingKit
 
@@ -18,6 +17,6 @@ final class TimesTests: XCTestCase {
 
     static var allTests = [
         ("testTimesVoid", testTimesVoid),
-        ("testTimesValue", testTimesValue),
+        ("testTimesValue", testTimesValue)
     ]
 }

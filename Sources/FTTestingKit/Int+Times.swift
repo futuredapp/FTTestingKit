@@ -1,4 +1,3 @@
-
 public extension Int {
     func times(execute: () -> Void) {
         for _ in 0..<self {

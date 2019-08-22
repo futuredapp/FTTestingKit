@@ -1,4 +1,3 @@
-
 import struct Foundation.Date
 
 extension Date: Mockup {
