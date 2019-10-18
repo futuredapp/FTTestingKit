@@ -1,5 +1,6 @@
 public protocol Mockup {
     static func random() -> Self
+    static func random(count: Int) -> [Self]
 }
 
 public extension Mockup {
