@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'PromiseKit' do |ss|
     ss.source_files = 'Sources/FTTestingKitPromiseKit/*'
-    ss.dependency 'PromiseKit', '~> 6.0'
+    ss.dependency 'PromiseKit', '~> 6.11'
     ss.dependency 'FTTestingKit/Core'
   end
 end
