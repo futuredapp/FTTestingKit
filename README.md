@@ -40,14 +40,17 @@ For simple repeated execution the library offers Ruby-like extension on `Int` ty
 
 ```swift
 10.times {
-	doSomething()
+    doSomething()
 }
+10.times(doSomething)
 ```
 
 This extension can create arrays too:
 
 ```swift
-10.times { someValue }
+10.times {
+    Int.random()
+}
 10.times(String.random)
 ```
 
