@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "FTTestingKit"
-  s.version          = "0.1.0"
+  s.version          = "0.2.0"
   s.summary          = "Mockup and asynchronous testing protocols and extensions."
   s.description      = <<-DESC
     Testing helpers for easier testing mockups and asynchronous testing.
@@ -23,7 +23,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'PromiseKit' do |ss|
     ss.source_files = 'Sources/FTTestingKitPromiseKit/*'
-    ss.dependency 'PromiseKit', '~> 6.0'
+    ss.dependency 'PromiseKit', '~> 6.11'
     ss.dependency 'FTTestingKit/Core'
   end
 end
