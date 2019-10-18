@@ -3,13 +3,13 @@ import FTTestingKit
 
 final class ExpectationTests: XCTestCase {
     func testInstantExpectation() {
-        expect(within: 0.1) { reply in
+        expect(within: 0.5) { reply in
             reply(.success)
         }
     }
 
     func testAsyncExpectation() {
-        expect(within: 0.1) { reply in
+        expect(within: 0.5) { reply in
             DispatchQueue.main.async {
                 reply(.success)
             }
@@ -17,7 +17,7 @@ final class ExpectationTests: XCTestCase {
     }
 
     func testDelayedExpectation() {
-        expect(within: 0.1) { reply in
+        expect(within: 0.5) { reply in
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
                 reply(.success)
             }

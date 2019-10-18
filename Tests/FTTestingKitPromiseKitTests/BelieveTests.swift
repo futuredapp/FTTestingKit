@@ -4,11 +4,11 @@ import FTTestingKitPromiseKit
 
 final class BelieveTests: XCTestCase {
     func testInstantPromise() {
-        believe(for: 0.1, in: Promise())
+        believe(for: 0.5, in: Promise())
     }
 
     func testDelayedPromise() {
-        believe(for: 0.1, in: after(seconds: 0.05))
+        believe(for: 0.5, in: after(seconds: 0.05))
     }
 
     static var allTests = [
