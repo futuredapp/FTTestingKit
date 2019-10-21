@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FTTestingKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="FTTestingKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">FTTestingKit Docs</a> (100% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">FTTestingKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        FTTestingKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Date.html">Date</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int.html">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/XCTestCase.html">XCTestCase</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/Mockup.html">Mockup</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='fttestingkit' class='heading'>FTTestingKit</h1>
+
+<p><img src="https://img.shields.io/cocoapods/v/FTTestingKit" alt="Cocoapods">
+<img src="https://img.shields.io/cocoapods/p/FTTestingKit" alt="Cocoapods platforms">
+<img src="https://img.shields.io/cocoapods/l/FTTestingKit" alt="Cocoapods">
+<img src="https://img.shields.io/bitrise/f8e8740dfdd3c6a2?token=_ejKL14TVCB_KLWT4-wDxw" alt="Bitrise"></p>
+
+<p>A set of helpers for simple creation of mockups, random values and testing of asynchronous code.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>When using Swift package manager add this line
+to your dependencies or install using Xcode 11 or newer:</p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/thefuntasty/FTTestingKit.git"</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="s">"0.3.0"</span><span class="p">)</span>
+</code></pre>
+
+<p>When using CocoaPods add following line to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'FTTestingKit'</span><span class="p">,</span> <span class="s1">'~&gt; 0.3'</span>
+</code></pre>
+
+<p>When using <code>PromiseKit</code> you can use either <code>FTTestingKitPromiseKit</code>
+target for testing promises or add subspec to your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'FTTestingKit'</span><span class="p">,</span> <span class="s1">'~&gt; 0.3'</span><span class="p">,</span> <span class="ss">subspecs: </span><span class="p">[</span><span class="s1">'PromiseKit'</span><span class="p">]</span>
+</code></pre>
+<h2 id='features' class='heading'>Features</h2>
+
+<p>Main features of this library are generating mockups,
+random values, arrays and asynchronous testing.</p>
+<h3 id='mockups' class='heading'>Mockups</h3>
+
+<p>For simple repeated execution the library offers Ruby-like extension on <code>Int</code> type. This is helpful in measurement tests.</p>
+<pre class="highlight swift"><code><span class="mi">10</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span>
+    <span class="nf">doSomething</span><span class="p">()</span>
+<span class="p">}</span>
+<span class="mi">10</span><span class="o">.</span><span class="nf">times</span><span class="p">(</span><span class="n">doSomething</span><span class="p">)</span>
+</code></pre>
+
+<p>This extension can create arrays too:</p>
+<pre class="highlight swift"><code><span class="mi">10</span><span class="o">.</span><span class="n">times</span> <span class="p">{</span>
+    <span class="kt">Int</span><span class="o">.</span><span class="nf">random</span><span class="p">()</span>
+<span class="p">}</span>
+<span class="mi">10</span><span class="o">.</span><span class="nf">times</span><span class="p">(</span><span class="kt">String</span><span class="o">.</span><span class="n">random</span><span class="p">)</span>
+</code></pre>
+
+<p>The framework extends some basic types (<code>Date</code>, <code>String</code>)
+with random generation similar to <code>Int</code>.
+All these types conform to <code><a href="Protocols/Mockup.html">Mockup</a></code> protocol
+which formally describes this functionality.</p>
+<pre class="highlight swift"><code><span class="kt">Date</span><span class="o">.</span><span class="nf">random</span><span class="p">()</span>
+<span class="kt">String</span><span class="o">.</span><span class="nf">random</span><span class="p">()</span>
+<span class="kt">Int</span><span class="o">.</span><span class="nf">random</span><span class="p">(</span><span class="nv">count</span><span class="p">:</span> <span class="mi">10</span><span class="p">)</span>
+</code></pre>
+<h3 id='expectations' class='heading'>Expectations</h3>
+
+<p>The framework extends <code>XCTestCase</code> with simple methods to call transactional asynchronous test like this:</p>
+<pre class="highlight swift"><code><span class="nf">expect</span><span class="p">(</span><span class="nv">within</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">)</span> <span class="p">{</span> <span class="n">reply</span> <span class="k">in</span>
+    <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">asyncAfter</span><span class="p">(</span><span class="nv">deadline</span><span class="p">:</span> <span class="o">.</span><span class="nf">now</span><span class="p">()</span> <span class="o">+</span> <span class="mf">0.05</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nf">reply</span><span class="p">(</span><span class="o">.</span><span class="n">success</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Extension for <code>PromiseKit</code> builds on this and offers testing promises using so-called belief in promise method:</p>
+<pre class="highlight swift"><code><span class="nf">believe</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="nf">someFunctionReturningPromise</span><span class="p">())</span>
+</code></pre>
+<h2 id='author' class='heading'>Author</h2>
+
+<p>Matěj Kašpar Jirásek, <a href="mailto:matej.jirasek@thefuntasty.com">matej.jirasek@thefuntasty.com</a></p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>FTTestingKit is available under the MIT license. See the <a href="LICENSE">LICENSE file</a> for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://github.com/thefuntasty/FTTestingKit" target="_blank" rel="external">Matěj Kašpar Jirásek</a>. All rights reserved. (Last updated: 2019-10-21)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.11.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
