@@ -85,7 +85,7 @@ believe(for: 0.5, in: someFunctionReturningPromise())
 
 ## Author
 
-Matěj Kašpar Jirásek, <matej.jirasek@thefuntasty.com>
+Matěj Kašpar Jirásek, <matej.jirasek@futured.app>
 
 ## License
 
