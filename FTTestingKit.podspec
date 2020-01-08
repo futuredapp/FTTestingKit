@@ -1,14 +1,14 @@
 Pod::Spec.new do |s|
   s.name             = "FTTestingKit"
-  s.version          = "0.3.0"
+  s.version          = "0.4.0"
   s.summary          = "Mockup and asynchronous testing protocols and extensions."
   s.description      = <<-DESC
     Testing helpers for easier testing mockups and asynchronous testing.
   DESC
   s.homepage         = "https://github.com/thefuntasty/FTTestingKit"
   s.license          = { type: "MIT", file: "LICENSE" }
-  s.author           = { "Matěj Kašpar Jirásek" => "matej.jirasek@thefuntasty.com" }
-  s.social_media_url = "https://twitter.com/thefuntasty"
+  s.author           = { "Matěj Kašpar Jirásek" => "matej.jirasek@futured.app" }
+  s.social_media_url = "https://twitter.com/Futuredapps"
   s.default_subspec  = 'Core'
   s.swift_version    = "5.0"
   s.ios.deployment_target = '8.0'
