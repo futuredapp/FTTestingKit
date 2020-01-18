@@ -13,7 +13,7 @@ When using Swift package manager add this line
 to your dependencies or install using Xcode 11 or newer:
 
 ```swift
-.package(url: "https://github.com/thefuntasty/FTTestingKit.git", from: "0.4.0")
+.package(url: "https://github.com/futuredapp/FTTestingKit.git", from: "0.5.0")
 ```
 
 When using CocoaPods add following line to your `Podfile`:
