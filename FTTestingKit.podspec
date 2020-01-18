@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "FTTestingKit"
-  s.version          = "0.4.0"
+  s.version          = "0.5.0"
   s.summary          = "Mockup and asynchronous testing protocols and extensions."
   s.description      = <<-DESC
     Testing helpers for easier testing mockups and asynchronous testing.
