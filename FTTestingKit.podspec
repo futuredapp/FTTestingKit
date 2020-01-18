@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
     Testing helpers for easier testing mockups and asynchronous testing.
   DESC
-  s.homepage         = "https://github.com/thefuntasty/FTTestingKit"
+  s.homepage         = "https://github.com/futuredapp/FTTestingKit"
   s.license          = { type: "MIT", file: "LICENSE" }
   s.author           = { "Matěj Kašpar Jirásek" => "matej.jirasek@futured.app" }
   s.social_media_url = "https://twitter.com/Futuredapps"
@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
-  s.source           = { git: "https://github.com/thefuntasty/FTTestingKit.git", tag: s.version.to_s }
+  s.source           = { git: "https://github.com/futuredapp/FTTestingKit.git", tag: s.version.to_s }
 
   s.subspec 'Core' do |ss|
     ss.source_files = "Sources/FTTestingKit/*"
