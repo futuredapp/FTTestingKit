@@ -69,3 +69,7 @@ fastlane/README.md
 
 # Project, because it can be generated using SPM
 *.xcodeproj
+
+#MAC OS
+.DS_Store
+
