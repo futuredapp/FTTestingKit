@@ -1,3 +1,5 @@
+![Title](documentation/FTTestingKit.svg)
+
 # FTTestingKit
 
 ![Cocoapods](https://img.shields.io/cocoapods/v/FTTestingKit)
