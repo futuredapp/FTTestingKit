@@ -1,4 +1,4 @@
-![Title](documentation/FTTestingKit.svg)
+<img align="right" alt="FTTestingKit logo" src="documentation/FTTestingKit.svg">
 
 # FTTestingKit
 
