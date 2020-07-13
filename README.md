@@ -2,7 +2,6 @@
 
 # FTTestingKit
 
-![Test](https://github.com/futuredapp/FTTestingKit/workflows/Test/badge.svg)
 ![Cocoapods](https://img.shields.io/cocoapods/v/FTTestingKit)
 ![Cocoapods platforms](https://img.shields.io/cocoapods/p/FTTestingKit)
 ![Cocoapods](https://img.shields.io/cocoapods/l/FTTestingKit)
