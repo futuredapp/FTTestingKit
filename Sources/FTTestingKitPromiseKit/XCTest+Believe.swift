@@ -12,11 +12,14 @@ public extension XCTestCase {
     ///                      tested for time-out and successful result.
     func believe<T>(for timeInterval: TimeInterval, in promise: @escaping @autoclosure () throws -> Promise<T>) {
         expect(within: timeInterval) { reply in
-            firstly { try promise() }.asVoid().recover { error in
-                reply(.failure(error))
-            }.done {
-                reply(.success)
-            }
+            firstly(execute: promise)
+                .asVoid()
+                .recover { error in
+                    reply(.failure(error))
+                }
+                .done {
+                    reply(.success)
+                }
         }
     }
 
@@ -27,11 +30,14 @@ public extension XCTestCase {
     ///                      tested for time-out and successful result.
     func believe<T>(for timeInterval: TimeInterval, in guarantee: @escaping @autoclosure () -> Guarantee<T>) {
         expect(within: timeInterval) { reply in
-            guarantee().asVoid().done {
-                reply(.success)
-            }.catch { error in
-                reply(.failure(error))
-            }
+            guarantee()
+                .asVoid()
+                .done {
+                    reply(.success)
+                }
+                .catch { error in
+                    reply(.failure(error))
+                }
         }
     }
 }

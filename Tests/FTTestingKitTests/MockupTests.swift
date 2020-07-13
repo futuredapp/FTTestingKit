@@ -1,5 +1,5 @@
-import XCTest
 import FTTestingKit
+import XCTest
 
 final class MockupTests: XCTestCase {
     func testArrayGeneration() {

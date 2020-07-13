@@ -1,6 +1,6 @@
-import XCTest
-import PromiseKit
 import FTTestingKitPromiseKit
+import PromiseKit
+import XCTest
 
 final class BelieveTests: XCTestCase {
     func testInstantPromise() {

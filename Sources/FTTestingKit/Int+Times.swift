@@ -13,6 +13,6 @@ extension Int {
     /// arrays of random values.
     /// - Parameter execute: Closure returning some item n-times.
     public func times<T>(execute: () -> T) -> [T] {
-        return (0..<self).map { _ in execute() }
+        (0..<self).map { _ in execute() }
     }
 }

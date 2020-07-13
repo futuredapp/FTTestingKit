@@ -3,7 +3,7 @@ extension String: Mockup {
     private static let mockupCharacters = Array("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
 
     public static func random() -> String {
-        return random(length: 15, characters: mockupCharacters)
+        random(length: 15, characters: mockupCharacters)
     }
 
     /// Generates random string of required length from supplied characters.
@@ -13,7 +13,7 @@ extension String: Mockup {
         length: Int,
         characters: [Character]
     ) -> String {
-        return String(length.times {
+        String(length.times {
             characters[Int.random(in: 0..<characters.count)]
         })
     }
