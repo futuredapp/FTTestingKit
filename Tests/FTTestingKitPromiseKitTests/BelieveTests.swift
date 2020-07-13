@@ -1,6 +1,6 @@
-import XCTest
-import PromiseKit
 import FTTestingKitPromiseKit
+import PromiseKit
+import XCTest
 
 final class BelieveTests: XCTestCase {
     func testInstantPromise() {
@@ -10,9 +10,4 @@ final class BelieveTests: XCTestCase {
     func testDelayedPromise() {
         believe(for: 0.5, in: after(seconds: 0.05))
     }
-
-    static var allTests = [
-        ("testInstantPromise", testInstantPromise),
-        ("testDelayedPromise", testDelayedPromise)
-    ]
 }

@@ -1,5 +1,5 @@
-import XCTest
 import FTTestingKit
+import XCTest
 
 final class ExpectationTests: XCTestCase {
     func testInstantExpectation() {
@@ -23,10 +23,4 @@ final class ExpectationTests: XCTestCase {
             }
         }
     }
-
-    static var allTests = [
-        ("testInstantExpectation", testInstantExpectation),
-        ("testAsyncExpectation", testAsyncExpectation),
-        ("testDelayedExpectation", testDelayedExpectation)
-    ]
 }

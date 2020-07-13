@@ -1,5 +1,5 @@
-import XCTest
 import FTTestingKit
+import XCTest
 
 final class TimesTests: XCTestCase {
     func testTimesVoid() {
@@ -14,9 +14,4 @@ final class TimesTests: XCTestCase {
         let generatedCount = 10.times { Int.random(in: 0...100) }.count
         XCTAssertEqual(generatedCount, 10)
     }
-
-    static var allTests = [
-        ("testTimesVoid", testTimesVoid),
-        ("testTimesValue", testTimesValue)
-    ]
 }
