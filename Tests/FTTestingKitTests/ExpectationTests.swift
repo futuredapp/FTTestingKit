@@ -23,10 +23,4 @@ final class ExpectationTests: XCTestCase {
             }
         }
     }
-
-    static var allTests = [
-        ("testInstantExpectation", testInstantExpectation),
-        ("testAsyncExpectation", testAsyncExpectation),
-        ("testDelayedExpectation", testDelayedExpectation)
-    ]
 }

@@ -19,11 +19,4 @@ final class MockupTests: XCTestCase {
     func testStringRandomness() {
         XCTAssertNotEqual(String.random(), String.random())
     }
-
-    static var allTests = [
-        ("testArrayGeneration", testArrayGeneration),
-        ("testDateRandomness", testDateRandomness),
-        ("testSingleCharacterString", testSingleCharacterString),
-        ("testStringRandomness", testStringRandomness)
-    ]
 }
